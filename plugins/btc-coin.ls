@@ -1,11 +1,18 @@
 export mainnet =
     decimals: 8
     tx-fee: \0.0000004
+    tx-fee-auto-mode: \per-byte
+    tx-fee-options: 
+        auto: \0.000001
+        cheap: \0.0000004
+        fee-per-byte: \0.000001
     mask: '1000000000000000000000000000000000'
     api: 
         provider: \insight
         url: \https://insight.bitpay.com
         decimal: 8
+        alternative:
+            balance: \https://blockchain.info/q/addressbalance/:address
     message-prefix: '\x18Bitcoin Signed Message:\n'
     bech32: 'bc'
     bip32:
@@ -31,7 +38,9 @@ export testnet =
     pubKeyHash: 0x6f
     scriptHash: 0xc4
     wif: 0xef
+export color = \#4650E7
 export type = \coin
 export enabled = yes
 export token = \btc
 export image = \./res/btc-ethnamed.png
+export usd-info = "url(https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,LTC,DASH,XEM,USDT,ETC&tsyms=USD).BTC.USD"

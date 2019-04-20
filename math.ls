@@ -4,10 +4,12 @@ require! {
 }
 math = ($)-> (x, y)->
     try 
-        new bignumber(x)[$](y).to-string!
+        new bignumber(x)[$](y).to-fixed!
     catch err
         throw "#{x} #{$} #{y} = #{err}"
 module.exports =
     <[ plus minus times div ]>
         |> map -> [it, math(it)]
         |> pairs-to-obj
+module.exports.from-hex = (hex)->
+    new bignumber(hex, 16).to-fixed!

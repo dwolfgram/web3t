@@ -13,9 +13,13 @@ parse-mapping-string = (config)->
         |> map split ' for '
         |> map -> [it.1, it.0]
         |> pairs-to-obj
+parse-mapping-object = (config)->
+    mapping = parse-mapping-string config.mode 
+    mapping <<<< config.network-mapping ? {}
+    mapping
 get-mapping = (config)->
     return parse-mapping-string config if typeof! config is \String
-    return config.network-mapping ? {} if typeof! config is \Object
+    return parse-mapping-object config if typeof! config is \Object
     {}
 module.exports = (config)->
     mode = get-mode config
