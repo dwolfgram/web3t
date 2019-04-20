@@ -19,7 +19,6 @@
     "postinstall": "0.4.2",
     "prelude-ls": "1.1.2",
     "qs": "6.5.2",
-    "require-ls": "0.0.8",
     "ripple-keypairs": "^0.11.0",
     "stellar-hd-wallet": "0.0.9",
     "stellar-sdk": "^0.13.0",
