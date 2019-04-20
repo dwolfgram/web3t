@@ -2,9 +2,9 @@
 (function(){
   var requireLs, loadProviders, loadCoins, buildApi;
   requireLs = require('require-ls');
-  loadProviders = require('./load-providers.ls');
-  loadCoins = require('./load-coins.ls');
-  buildApi = require('./build-api.ls');
+  loadProviders = require('./load-providers.js');
+  loadCoins = require('./load-coins.js');
+  buildApi = require('./build-api.js');
   module.exports = function(config, cb){
     return loadCoins(config, function(err, coins){
       if (err != null) {

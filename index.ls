@@ -1,8 +1,8 @@
 require! {
     \require-ls
-    \./load-providers.ls
-    \./load-coins.ls
-    \./build-api.ls
+    \./load-providers.js
+    \./load-coins.js
+    \./build-api.js
 }
 
 module.exports = (config, cb)->

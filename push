@@ -1,4 +1,4 @@
-lsc -c index.ls
+lsc -c index.js
 git add .
 git commit -m "update npm"
 git push
