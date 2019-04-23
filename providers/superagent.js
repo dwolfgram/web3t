@@ -34,7 +34,7 @@
       return cb(err);
     }
     instance = superagent[method](args[0], args[1]);
-    instance.proxy(proxyServers[num]);
+    //instance.proxy(proxyServers[num]);
     if (type != null) {
       instance.type(type);
     }
